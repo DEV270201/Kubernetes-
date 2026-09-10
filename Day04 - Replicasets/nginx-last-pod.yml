@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    tier: frontend
+    on: always
+  name: nginx-pod-3
+spec:
+  containers:
+  - image: nginx:latest
+    name: nginx-pod-3
+    resources: {}
+    ports:
+      - containerPort: 80
+        protocol: TCP
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
